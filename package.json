@@ -1,0 +1,31 @@
+{
+  "name": "one-to-many-relationships-sequelize",
+  "version": "1.0.0",
+  "description": "A personal reference of one-to-many table relationships in sequelize.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josh-W42/one-to-many-relationships-sequelize.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josh-W42/one-to-many-relationships-sequelize/issues"
+  },
+  "homepage": "https://github.com/josh-W42/one-to-many-relationships-sequelize#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0"
+  }
+}
