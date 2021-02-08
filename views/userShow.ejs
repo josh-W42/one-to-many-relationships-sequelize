@@ -1,0 +1,23 @@
+<h1><%= user.firstName %> <%= user.lastName %> </h1>
+<p><%= user.age %> <%= user.email %> </p>
+
+<p>Pets:</p>
+<ul>
+    <% user.pets.forEach(pet => { %>
+        <li>
+            <%= pet.name %> 
+        </li>
+    <% }) %>
+</ul>
+<form method="POST" action="/users/<%= user.id %>/newPet">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="Doge" />
+
+    <label for="species">Species:</label>
+    <input type="text" name="species" id="species" placeholder="dog"/>
+
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description" placeholder="I am the best pet."/>
+
+    <input type="submit" value="Add pet"/>
+</form>
