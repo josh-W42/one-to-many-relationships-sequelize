@@ -4,10 +4,10 @@ const router = express.Router();
 const db = require('../models');
 
 
-// this will be at the level of /users/
+// This will be at the level of /users/
 router.get('/', (req, res) => {
     db.user.findAll().then(allUsers => {
-        res.render('./allUsers', { allUsers })
+        res.render('users/', { allUsers })
     });
 });
 
@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
         include: [db.pet]
     }).then( user => {
         console.log(user);
-        res.render('./userShow', { user });
+        res.render('users/show', { user });
     }).catch(error => {
         console.log('An error has occured when getting a user.');
         res.redirect('/users');
@@ -32,8 +32,8 @@ router.post('/:id/newPet', (req, res) => {
     db.pet.create({
         name: req.body.name,
         species: req.body.species,
-        description: req.body.description,
         userId: req.params.id,
+        description: req.body.description,
     }).then(newPet => {
         res.redirect(`/users/${req.params.id}`);
     }).catch(error => {
