@@ -8,6 +8,8 @@ A personal reference of one-to-many table relationships in sequelize.
 
 ## What's new in the setup?
 
+- 1:Many associations between relational database models.
+
 ### First let's create two models:
 
 After creating a new database, we create two models.
